@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 240 10% 98%;
+    --foreground: 240 10% 8%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 8%;
+    --card-border: 240 6% 90%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 8%;
+
+    /* Primary - Modern blue gradient */
+    --primary: 230 80% 60%;
+    --primary-dark: 235 85% 45%;
+    --primary-light: 225 75% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Sophisticated gray */
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 20%;
+
+    /* Muted tones */
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    /* Accent - Warm amber */
+    --accent: 45 93% 58%;
+    --accent-dark: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Interactive elements */
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 230 80% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(230 80% 60%), hsl(235 85% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 93% 58%), hsl(38 92% 50%));
+    --gradient-bg: linear-gradient(180deg, hsl(240 10% 98%), hsl(240 8% 95%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(240 10% 8% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(240 10% 8% / 0.1), 0 2px 4px -1px hsl(240 10% 8% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(240 10% 8% / 0.1), 0 4px 6px -2px hsl(240 10% 8% / 0.05);
+    --shadow-glow: 0 0 20px hsl(230 80% 60% / 0.3);
+
+    /* Layout */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 15%;
+    --sidebar-primary: 230 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 10% 15%;
+    --sidebar-border: 240 6% 90%;
+    --sidebar-ring: 230 80% 60%;
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Base colors */
+    --background: 240 10% 6%;
+    --foreground: 240 10% 95%;
+
+    /* Card system */
+    --card: 240 10% 8%;
+    --card-foreground: 240 10% 95%;
+    --card-border: 240 8% 15%;
+
+    /* Popover */
+    --popover: 240 10% 8%;
+    --popover-foreground: 240 10% 95%;
+
+    /* Primary - Brighter in dark mode */
+    --primary: 230 85% 70%;
+    --primary-dark: 235 85% 55%;
+    --primary-light: 225 80% 85%;
+    --primary-foreground: 240 10% 6%;
+
+    /* Secondary */
+    --secondary: 240 8% 12%;
+    --secondary-foreground: 240 10% 85%;
+
+    /* Muted tones */
+    --muted: 240 8% 12%;
+    --muted-foreground: 240 5% 64%;
+
+    /* Accent - Warmer in dark mode */
+    --accent: 45 96% 64%;
+    --accent-dark: 38 95% 56%;
+    --accent-foreground: 240 10% 6%;
+
+    /* Status colors */
+    --destructive: 0 84% 68%;
+    --destructive-foreground: 240 10% 6%;
+    
+    --success: 142 71% 55%;
+    --success-foreground: 240 10% 6%;
+
+    /* Interactive elements */
+    --border: 240 8% 15%;
+    --input: 240 8% 15%;
+    --ring: 230 85% 70%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(230 85% 70%), hsl(235 85% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 96% 64%), hsl(38 95% 56%));
+    --gradient-bg: linear-gradient(180deg, hsl(240 10% 6%), hsl(240 8% 4%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5), 0 4px 6px -2px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 30px hsl(230 85% 70% / 0.4);
+
+    /* Sidebar */
+    --sidebar-background: 240 10% 4%;
+    --sidebar-foreground: 240 10% 90%;
+    --sidebar-primary: 230 85% 70%;
+    --sidebar-primary-foreground: 240 10% 6%;
+    --sidebar-accent: 240 8% 10%;
+    --sidebar-accent-foreground: 240 10% 90%;
+    --sidebar-border: 240 8% 12%;
+    --sidebar-ring: 230 85% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-background to-muted/30 text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Dashboard specific styles */
+  .dashboard-card {
+    @apply bg-card border border-card-border rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300;
+  }
+
+  .dashboard-header {
+    @apply bg-card/50 backdrop-blur-sm border-b border-card-border;
+  }
+
+  .sidebar-nav {
+    @apply text-sidebar-foreground hover:text-sidebar-primary hover:bg-sidebar-accent rounded-md transition-colors duration-200;
+  }
+
+  .content-card {
+    @apply bg-card border border-card-border rounded-lg shadow-sm hover:shadow-md hover:scale-[1.02] transition-all duration-300 cursor-pointer;
+  }
+
+  .search-input {
+    @apply bg-background/50 border-border focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200;
+  }
+}
